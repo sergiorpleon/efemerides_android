@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.dte.listefemerides"
+    android:versionCode="2"
+    android:versionName="1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="Efemérides" >
+        <activity
+            android:name="android.dte.listefemerides.VerActivityApp"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.dte.listefemerides.BuscarActivityApp"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+            </intent-filter>
+        </activity>
+        <!--
+**********************************************************************
+* Test Simple Widget Provider
+**********************************************************************
+        -->
+
+        <activity
+            android:name="android.dte.listefemerides.VerActivitySimple"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="android.dte.listefemerides.WidgetEfemerides" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+        <!--
+**********************************************************************
+* Test List Widget Provider
+**********************************************************************
+        -->
+
+        <activity
+            android:name="android.dte.listefemerides.VerActivityList"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.dte.listefemerides.BuscarActivityList"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="android.dte.listefemerides.MostrarActivityList"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="android.dte.listefemerides.TestListWidgetProvider" >
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/test_list_appwidget_provider" />
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- The service serving the RemoteViews to the collection widget -->
+        <service
+            android:name="android.dte.listefemerides.TestRemoteViewsService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+    </application>
+
+</manifest>

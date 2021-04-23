@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lytLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/boxblanco" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+         android:textColor="#000000"
+        android:text="Realizado por:" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        android:text="Departamento de Tecnología Educativa" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Programador:"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sergio R. Pérez León"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="10dp"
+        android:gravity="center" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="UCLV-2015"
+        android:gravity="center" />
+
+</LinearLayout>

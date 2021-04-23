@@ -1,0 +1,9 @@
+<!-- xml/test_list_appwidget_provider.xml -->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+android:minWidth="296dp"
+android:minHeight="296dp"
+android:updatePeriodMillis="360000"
+android:initialLayout="@layout/test_list_widget_layout"
+android:label="List Widget"
+>
+</appwidget-provider>
